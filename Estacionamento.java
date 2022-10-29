@@ -37,7 +37,90 @@ public class Estacionamento {
                 case 1:
                     cadastrarCarro(scanner);
                     break;
+                case 2: 
+                    listarCarro();
+                    break;    
+                case 3: 
+                    cadastrarMoto(scanner);
+                    break;
+                case 4: 
+                    listarMoto();
+                    break;
+                case 5:
+                    cadastrarBicicleta(scanner);
+                    break;
+                case 6:
+                    listarBicicleta();
+                    break;
+                case 7:
+                    cadastrarVaga(scanner);
+                    break;
+                case 8:
+                    listarVaga();
+                    break;    
+                case 9:
+                    cadastrarLocação(scanner);
+                    break;
+                case 10:
+                    listarLocação();
+                    break;
             }
+        }while(opcao!= 0);
+        scanner.close();
+    } 
+
+    public static void cadastrarCarro(Scanner scanner){
+        try{
+        System.out.println("Cadastrar Carro");
+        System.out.println("Digite o ID do carro: ");
+        int id = scanner.nextInt();
+        System.out.println("Nome: ");
+        String nome = scanner.next();
+        System.out.println("Placa: ");
+        String placa = scanner.next();
+        System.out.println("Cor: ");
+        String cor = scanner.next();
+
+        new Carro(id, nome, placa, cor);
+    }catch(Exception e){
+        System.out.println("Erro ao cadastrar Carro");
+    }
+
+    }
+
+    public static void listarCarro(){
+        for(Carro carro : Carro.carros){
+            System.out.println(carro);
+        }
+    }
+
+    public static void removeCarro (Scanner scanner){
+        System.out.println("Remover Carro");
+        System.out.println("Informe a placa: ");
+        String placa = scanner.next();
+        System.out.println("Digite o ID do carro: ");
+        int idCarro = scanner.nextInt();
+        try{
+            Carro.removeCarro(idCarro);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+     }
+     public static void cadastrarMoto(Scanner scanner){
+        try{
+        System.out.println("Cadastrar Moto");
+        System.out.println("Digite o ID do moto: ");
+        int idMoto = scanner.nextInt();
+        System.out.println("Nome: ");
+        String nome = scanner.next();
+        System.out.println("Placa: ");
+        String placa = scanner.next();
+        System.out.println("Cilindrada: ");
+        String cilindrada = scanner.next();
+
+        new Moto(idMoto, nome, placa, cilindrada);
+        }catch (Exception e){
+            System.out.println("Erro ao cadastrar Moto");
         }
     }
 }
