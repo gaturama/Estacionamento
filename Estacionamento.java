@@ -12,6 +12,7 @@ public class Estacionamento {
         System.out.println("Seja bem-vindo ao Plaza Park");
 
         do{
+            System.out.println("==========================");
             System.out.println("Escolha uma opção");
             System.out.println("1 - Cadastrar Carro: ");
             System.out.println("2 - Listar Carro: ");
@@ -28,7 +29,8 @@ public class Estacionamento {
             System.out.println("13 - Cadastrar Locação: ");
             System.out.println("14 - Listar Locação: ");
             System.out.println("15 - Remover Locação: ");
-
+            System.out.println("==========================");
+            
             try{
                 opcao = scanner.nextInt();
             }catch (Exception e){
