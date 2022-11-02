@@ -201,6 +201,7 @@ public class Estacionamento {
             System.out.println("Número da vaga: ");
             String numero = scanner.next();
             System.out.println("Tamanho: ");
+            String tamanho = scanner.next();
            
         System.out.println("Digite a quantidade de vagas: ");
         int quantidade = scanner.nextInt();
