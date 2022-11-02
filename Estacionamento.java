@@ -30,7 +30,7 @@ public class Estacionamento {
             System.out.println("14 - Listar Locação: ");
             System.out.println("15 - Remover Locação: ");
             System.out.println("==========================");
-            
+
             try{
                 opcao = scanner.nextInt();
             }catch (Exception e){
@@ -43,31 +43,46 @@ public class Estacionamento {
                     break;
                 case 2: 
                     listarCarro();
-                    break;    
+                    break;   
                 case 3: 
+                    removeCarro(scanner); 
+                    break;    
+                case 4: 
                     cadastrarMoto(scanner);
                     break;
-                case 4: 
+                case 5: 
                     listarMoto();
                     break;
-                case 5:
+                case 6: 
+                    removeMoto(scanner);
+                    break;   
+                case 7:
                     cadastrarBicicleta(scanner);
                     break;
-                case 6:
+                case 8:
                     listarBicicleta();
                     break;
-                case 7:
+                case 9: 
+                    removeBicicleta(scanner);
+                    break;
+                case 10: 
                     cadastrarVaga(scanner);
                     break;
-                case 8:
+                case 11:
                     listarVaga();
-                    break;    
-                case 9:
+                    break;   
+                case 12:
+                    removeVaga(scanner);
+                    break;     
+                case 13:
                     cadastrarLocação(scanner);
                     break;
-                case 10:
+                case 14:
                     listarLocação();
                     break;
+                case 15:
+                    removeLocacao(scanner); 
+                    break;   
             }
         }while(opcao!= 0);
         scanner.close();
