@@ -222,7 +222,6 @@ public class Estacionamento {
                 default:
                     throw new Exception("Tipo inválido!");    
             }
-            String tamanho = scanner.next();
             System.out.println("Preço: ");
             String preço = scanner.next();
 
