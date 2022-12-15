@@ -6,6 +6,7 @@ public class Vaga extends Generic {
     private String tipo;
     private String tamanho;
     private String preco;
+    
 
     private static ArrayList<Vaga> vagas = new ArrayList<Vaga>();
 
@@ -58,14 +59,6 @@ public class Vaga extends Generic {
         throw new Exception("Vaga não existe");
     }
 
-    public static Vaga getVaga(int id) throws Exception{
-        for (Vaga vaga : vagas){
-            if (vaga.getId() == id) {
-                return vaga;
-            }
-        }
-        throw new Exception("Vaga não encontrado");
-    }
 
     public static void removeVaga(int id) throws Exception{
         Vaga vaga = getVaga(id);
